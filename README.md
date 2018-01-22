@@ -6,7 +6,7 @@ Service for send notification by API
 ## API v0
 
 ### Telegram
-Add [NotifyBot](https://t.me/novel_notify_bot) and use `chat id`, which he send to you, as `user`.
+Add [notify me](https://t.me/notify_me_robot) and save `user`, which he send to you.
 
 `/api/v0/telegram`
 ```
