@@ -3,4 +3,4 @@
 # notify
 Service for send notification by API
 
-[Official Site]()
+[Official Site](https://usenotify.info)
