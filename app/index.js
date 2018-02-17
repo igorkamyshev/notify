@@ -27,7 +27,7 @@ app.post('/api/v0/telegram', (request, response) => {
         })
         .catch(err => {
             response.status(500)
-            response.send()
+            response.send('Something went wrong')
         })
 })
 
