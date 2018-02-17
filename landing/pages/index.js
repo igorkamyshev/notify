@@ -15,11 +15,11 @@ export default () =>
         <div id="wrapper">
             <Header title={'notify'} links={sections.map(section => section.name)}>
                 <p>
-                    Free service for sending notifications by public API.
+                    Free service for sending notifications via public API.
                     <br />
-                    Use this site or deploy <a href="https://hub.docker.com/r/igorkamyshev/notify/" target="_blank">Docker container</a> on your server.
+                    Use this site or deploy a <a href="https://hub.docker.com/r/igorkamyshev/notify/" target="_blank">Docker container</a> on your server.
                     <br />
-                    Code of this project hosted on <a href="https://github.com/TheNovel/notify" target="_blank">GitHub</a>
+                    Sourse code is hosted on <a href="https://github.com/TheNovel/notify" target="_blank">GitHub</a>
                 </p>
             </Header>
 

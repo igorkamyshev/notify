@@ -2,7 +2,7 @@ const bodyParser = require('body-parser')
 const express = require('express')
 const path = require('path')
 
-const { telegram } = require('./distanations/index')
+const { telegram } = require('./destinations/index')
 
 const LANDING_PATH = '../landing/out'
 
