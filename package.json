@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "node -r dotenv/config index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "eslint ."
   },
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -16,6 +17,7 @@
     "node-telegram-bot-api": "^0.30.0"
   },
   "devDependencies": {
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "eslint": "^4.19.1"
   }
 }

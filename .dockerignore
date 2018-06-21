@@ -1,5 +1,2 @@
 .env
 node_modules
-landing/.next
-landing/node_modules
-landing/out

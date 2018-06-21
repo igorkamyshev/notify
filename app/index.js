@@ -1,35 +1,29 @@
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const express = require('express')
-const path = require('path')
 
 const { telegram } = require('./destinations/index')
-
-const LANDING_PATH = '../landing/out'
 
 const app = express()
 const port = 8080
 
 app.use(bodyParser.json())
 app.use(cors())
-app.use(express.static(path.join(__dirname, LANDING_PATH)));
-
-app.get('/', (request, response) => {
-    response.sendFile(path.join(__dirname, `${LANDING_PATH}/index.html`))
-})
 
 app.post('/api/v0/telegram', (request, response) => {
     const data = request.body
 
     telegram.sendMessage(data.user, data.message)
-        .then(message => {
-            response.status(200)
-            response.send()
-        })
-        .catch(err => {
-            response.status(500)
-            response.send('Something went wrong')
-        })
+        .then(
+            () => {
+                response.status(200)
+                response.send()
+            },
+            () => {
+                response.status(500)
+                response.send('Something went wrong')
+            }
+        )
 })
 
 app.listen(port)
