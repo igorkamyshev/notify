@@ -9,13 +9,6 @@ COPY yarn.lock ./
 RUN yarn install
 COPY . .
 
-WORKDIR /usr/src/app/landing
-RUN yarn install
-RUN yarn build
-RUN yarn export
-
-WORKDIR /usr/src/app
-
 EXPOSE 8080
 
 CMD [ "pm2-docker", "start", "pm2.json" ]
