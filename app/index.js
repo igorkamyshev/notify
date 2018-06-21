@@ -14,14 +14,16 @@ app.post('/api/v0/telegram', (request, response) => {
     const data = request.body
 
     telegram.sendMessage(data.user, data.message)
-        .then(() => {
-            response.status(200)
-            response.send()
-        })
-        .catch(() => {
-            response.status(500)
-            response.send('Something went wrong')
-        })
+        .then(
+            () => {
+                response.status(200)
+                response.send()
+            },
+            () => {
+                response.status(500)
+                response.send('Something went wrong')
+            }
+        )
 })
 
 app.listen(port)
