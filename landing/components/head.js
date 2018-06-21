@@ -1,8 +1,7 @@
-import NextHead from 'next/head'
+import NextHead from 'next/head' // eslint-disable-line no-unused-vars
 
 import css from '../utils/css'
 import favicons from '../utils/favicons'
-
 
 const defaultDescription = ''
 const defaultKeywords = ''
@@ -15,9 +14,9 @@ const Head = ({ title, description, keywords }) =>
         <meta name="description" content={description || defaultDescription} />
         <meta name="keywords" content={keywords || defaultKeywords} />
 
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href={css('main')} />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href={css('main')} />
 
         <link rel="apple-touch-icon" sizes="180x180" href={favicons('apple-touch-icon.png')} />
         <link rel="icon" type="image/png" sizes="32x32" href={favicons('favicon-32x32.png')} />

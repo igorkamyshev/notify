@@ -15,7 +15,7 @@ export default [
                 from: 'String',
                 name: 'String',
                 text: 'String',
-            }
-        }
-    }
+            },
+        },
+    },
 ]

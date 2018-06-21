@@ -1,12 +1,11 @@
-import Background from '../components/background'
-import Footer from '../components/footer'
-import Head from '../components/head'
-import Header from '../components/header'
-import Scripts from '../components/scripts'
-import Section from '../components/section'
+import Background from '../components/background' // eslint-disable-line no-unused-vars
+import Footer from '../components/footer' // eslint-disable-line no-unused-vars
+import Head from '../components/head' // eslint-disable-line no-unused-vars
+import Header from '../components/header' // eslint-disable-line no-unused-vars
+import Scripts from '../components/scripts' // eslint-disable-line no-unused-vars
+import Section from '../components/section' // eslint-disable-line no-unused-vars
 
 import sections from '../data/sections'
-
 
 export default () =>
     <div>
