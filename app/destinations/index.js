@@ -1,3 +1,3 @@
 module.exports = {
-    telegram: require('./telegram')
+    telegram: require('./telegram'),
 }

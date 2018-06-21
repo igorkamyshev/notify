@@ -12,7 +12,7 @@ const port = 8080
 
 app.use(bodyParser.json())
 app.use(cors())
-app.use(express.static(path.join(__dirname, LANDING_PATH)));
+app.use(express.static(path.join(__dirname, LANDING_PATH)))
 
 app.get('/', (request, response) => {
     response.sendFile(path.join(__dirname, `${LANDING_PATH}/index.html`))
@@ -22,11 +22,11 @@ app.post('/api/v0/telegram', (request, response) => {
     const data = request.body
 
     telegram.sendMessage(data.user, data.message)
-        .then(message => {
+        .then(() => {
             response.status(200)
             response.send()
         })
-        .catch(err => {
+        .catch(() => {
             response.status(500)
             response.send('Something went wrong')
         })
