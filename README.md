@@ -5,4 +5,3 @@
 Free service for sending notifications via public API.
 
 [Official Site](https://usenotify.info)
-x
