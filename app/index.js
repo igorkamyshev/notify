@@ -10,7 +10,7 @@ const port = 8080
 app.use(bodyParser.json())
 app.use(cors())
 
-app.post('/api/v0/telegram', (request, response) => {
+app.post('/v0/telegram', (request, response) => {
     const data = request.body
 
     telegram.sendMessage(data.user, data.message)
