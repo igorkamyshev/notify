@@ -17,6 +17,7 @@ script:
   - yarn lint
 
 before_deploy:
+  - docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
   - docker tag $IMAGE_NAME $DOCKER_USERNAME/${IMAGE_NAME}:latest
   - docker tag $IMAGE_NAME $DOCKER_USERNAME/${IMAGE_NAME}:${version}
@@ -24,7 +25,6 @@ before_deploy:
 deploy:
   provider: script
   script:
-    - docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
     - docker push "${IMAGE_NAME}:latest" && docker push "${IMAGE_NAME}:${version}"
   on:
     branch: master
