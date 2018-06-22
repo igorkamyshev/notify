@@ -17,6 +17,7 @@ script:
   - yarn lint
 
 before_deploy:
+  - rm -rf node_modules
   - docker pull "$IMAGE_NAME" || true
   - docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
