@@ -1,2 +1,8 @@
 .env
 node_modules
+.travis.yml
+deploy_key.enc
+LICENSE
+logo.png
+README.md
+.eslintrc.js
