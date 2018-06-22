@@ -21,6 +21,7 @@ before_deploy:
 - openssl aes-256-cbc -K $encrypted_bc8a250c7fbc_key -iv $encrypted_bc8a250c7fbc_iv
   -in deploy_key.enc -out ./deploy_key -d
 deploy:
+  skip_cleanup: true
   provider: script
   script:
   - docker push "$DOCKER_USERNAME/${IMAGE_NAME}:latest"
