@@ -13,18 +13,17 @@ before_script:
 script:
 - yarn lint
 before_deploy:
-- rm -rf node_modules
+- openssl aes-256-cbc -K $encrypted_bc8a250c7fbc_key -iv $encrypted_bc8a250c7fbc_iv
+  -in deploy_key.enc -out ./deploy_key -d
 - docker pull "$IMAGE_NAME" || true
 - docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
 - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 - docker tag "$IMAGE_NAME" "$DOCKER_USERNAME/${IMAGE_NAME}:latest"
-- openssl aes-256-cbc -K $encrypted_bc8a250c7fbc_key -iv $encrypted_bc8a250c7fbc_iv
-  -in deploy_key.enc -out ./deploy_key -d
+- docker push "$DOCKER_USERNAME/${IMAGE_NAME}:latest"
 deploy:
   skip_cleanup: true
   provider: script
   script:
-  - docker push "$DOCKER_USERNAME/${IMAGE_NAME}:latest"
   - chmod 600 deploy_key && ssh -o StrictHostKeyChecking=no -i deploy_key $SERVER_USER@$SERVER_HOST "cd web/notify && ./deploy.sh"
   on:
     branch: master
