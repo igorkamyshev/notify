@@ -20,11 +20,11 @@ before_deploy:
   - docker pull "$IMAGE_NAME" || true
   - docker build --pull --cache-from "$IMAGE_NAME" --tag "$IMAGE_NAME" .
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-  - docker tag $IMAGE_NAME $DOCKER_USERNAME/${IMAGE_NAME}:latest
+  - docker tag "$IMAGE_NAME" "$DOCKER_USERNAME/${IMAGE_NAME}:latest"
 
 deploy:
   provider: script
   script:
-    - docker push "${IMAGE_NAME}:latest" && docker push "${IMAGE_NAME}:${version}"
+    - docker push "$DOCKER_USERNAME/${IMAGE_NAME}:latest"
   on:
     branch: master
