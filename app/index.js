@@ -11,19 +11,19 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.post('/v0/telegram', (request, response) => {
-    const data = request.body
+  const data = request.body
 
-    telegram.sendMessage(data.user, data.message)
-        .then(
-            () => {
-                response.status(200)
-                response.send()
-            },
-            () => {
-                response.status(500)
-                response.send('Something went wrong')
-            }
-        )
+  telegram.sendMessage(data.user, data.message)
+    .then(
+      () => {
+        response.status(200)
+        response.send()
+      },
+      () => {
+        response.status(500)
+        response.send('Something went wrong')
+      },
+    )
 })
 
 app.listen(port)
