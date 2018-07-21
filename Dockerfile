@@ -6,7 +6,7 @@ RUN apk add --no-cache yarn
 WORKDIR /usr/src/app
 COPY package.json ./
 COPY yarn.lock ./
-RUN yarn install
+RUN yarn install --prod
 COPY . .
 
 EXPOSE 8080
