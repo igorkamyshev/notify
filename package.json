@@ -17,7 +17,7 @@
     "node-telegram-bot-api": "^0.30.0"
   },
   "devDependencies": {
-    "@solid-soda/eslint-config": "^2.1.5",
+    "@solid-soda/eslint-config": "^2.1.6",
     "dotenv": "^6.0.0",
     "eslint": "^5.3.0"
   }
