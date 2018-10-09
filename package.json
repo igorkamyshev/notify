@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@solid-soda/eslint-config": "^2.1.6",
-    "dotenv": "^6.0.0",
+    "dotenv": "^6.1.0",
     "eslint": "^5.6.1"
   }
 }
