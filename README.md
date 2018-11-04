@@ -4,10 +4,10 @@
 # notify
 Free service for sending notifications via public API with ease.
 
-## description
+## Description
 Notify is especialy usefull for static website administrators who want to add a feedback form, but struggle with server side of that problem.
 
-## usage
+## Usage
 ### Telegram
 
 1. Add [Telegram bot](https://t.me/notify_me_robot) and save generated user ID
@@ -23,6 +23,9 @@ Notify is especialy usefull for static website administrators who want to add a 
     }
 }
 ```
+
+### Deploy on your server
+Notify is also available as a [docker container](https://hub.docker.com/r/igorkamyshev/notify/) and can be deployed on your own server
 
 
 ## TODO
