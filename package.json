@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "node -r dotenv/config index.js",
     "start": "node index.js",
-    "lint": "eslint ."
+    "s": "yarn soda"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -17,8 +17,16 @@
     "node-telegram-bot-api": "^0.30.0"
   },
   "devDependencies": {
-    "@solid-soda/eslint-config": "^2.1.6",
-    "dotenv": "^7.0.0",
-    "eslint": "^5.13.0"
+    "@solid-soda/scripts": "^1.2.4",
+    "dotenv": "^7.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn soda lint-staged",
+      "commit-msg": "yarn soda commitlint"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
