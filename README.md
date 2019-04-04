@@ -2,12 +2,12 @@
 [![Build Status](https://travis-ci.org/igorkamyshev/notify.svg?branch=master)](https://travis-ci.org/igorkamyshev/notify)
 
 # notify
-Free service for sending notifications via public API with ease.
+Service for sending notifications via public API with ease.
 
 ## Description
 Notify is especialy usefull for static website administrators who want to add a feedback form, but struggle with server side of that problem.
 
-## Usage
+## API
 ### Telegram
 
 1. Add [Telegram bot](https://t.me/notify_me_robot) and save generated user ID
@@ -24,19 +24,19 @@ Notify is especialy usefull for static website administrators who want to add a 
 }
 ```
 
-## Deploy on your server
-Notify is also available as a [docker container](https://hub.docker.com/r/igorkamyshev/notify/) and can be deployed on your own server
+## Deploy
+Notify is vailable as a [docker container](https://hub.docker.com/r/igorkamyshev/notify/) and can be deployed on your own server.
 
-## Usage as a docker container
 It exposes port ```8080``` and accepts ```TELEGRAM_KEY``` enviroment variable,  which is the key for your own Telegram bot.
 
 
-```docker pull igorkamyshev/notify```
+```sh
+docker pull igorkamyshev/notify
+docker run -e TELEGRAM_KEY=key igorkamyshev/notify
+```
 
-```docker run --env-file ./env igorkamyshev/notify```
+Also, you can build it from sources, of course.
 
 
 ## TODO
 + Email client
-
-[Official Site](https://usenotify.info)
