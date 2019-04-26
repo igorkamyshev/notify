@@ -11,7 +11,7 @@
     "s": "yarn soda"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "node-telegram-bot-api": "^0.30.0"
