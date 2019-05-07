@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@solid-soda/scripts": "^1.7.0",
-    "dotenv": "^7.0.0"
+    "dotenv": "^8.0.0"
   },
   "husky": {
     "hooks": {
