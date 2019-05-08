@@ -10,7 +10,8 @@ Notify is especialy usefull for static website administrators who want to add a 
 ## API
 ### Telegram
 
-1. Add [Telegram bot](https://t.me/notify_me_robot) and save generated user ID
+1. Create Telegram bot, save generated key, and pass it to Notify as enviroment variable
+1. Start chat with your Telegram bot and save generated user ID
 2. Send POST request to {NOTIFY_SERVER_URL}/v0/telegram with the following body:
 ```
 {
