@@ -11,7 +11,7 @@ Notify is especialy usefull for static website administrators who want to add a 
 ### Telegram
 
 1. Add [Telegram bot](https://t.me/notify_me_robot) and save generated user ID
-2. Send POST request to api.usenotify.info/v0/telegram with the following body:
+2. Send POST request to {NOTIFY_SERVER_URL}/v0/telegram with the following body:
 ```
 {
     "user": "String",
