@@ -17,7 +17,7 @@
     "node-telegram-bot-api": "^0.30.0"
   },
   "devDependencies": {
-    "@solid-soda/scripts": "^1.7.1",
+    "@solid-soda/scripts": "^1.8.2",
     "dotenv": "^8.0.0"
   },
   "husky": {
