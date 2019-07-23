@@ -2,7 +2,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const express = require('express')
 
-const { telegram } = require('./destinations/index')
+const { telegram } = require('./destinations')
 
 const app = express()
 const port = 8080
@@ -10,20 +10,17 @@ const port = 8080
 app.use(bodyParser.json())
 app.use(cors())
 
-app.post('/v0/telegram', (request, response) => {
-  const data = request.body
+app.post('/v0/telegram', async (request, response) => {
+  const { user, message } = request.body
 
-  telegram.sendMessage(data.user, data.message)
-    .then(
-      () => {
-        response.status(200)
-        response.send()
-      },
-      () => {
-        response.status(500)
-        response.send('Something went wrong')
-      },
-    )
+  console.log(user)
+
+  const [code, result] = await telegram
+    .sendMessage(user, message)
+    .then(() => [200, 'Success'], () => [500, 'Something went wrong'])
+
+  response.status(code)
+  response.send(result)
 })
 
 app.listen(port)
