@@ -1,6 +1,3 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://travis-ci.org/igorkamyshev/notify.svg?branch=master)](https://travis-ci.org/igorkamyshev/notify)
-
 # notify
 Service for sending notifications via public API with ease.
 
@@ -25,7 +22,7 @@ Notify is especialy usefull for static website administrators who want to add a 
 }
 ```
 
-## Deploy
+## Usage
 Notify is vailable as a [docker container](https://hub.docker.com/r/igorkamyshev/notify/) and can be deployed on your own server.
 
 It exposes port ```8080``` and accepts ```TELEGRAM_KEY``` enviroment variable,  which is the key for your own Telegram bot.
@@ -37,7 +34,3 @@ docker run -e TELEGRAM_KEY=key igorkamyshev/notify
 ```
 
 Also, you can build it from sources, of course.
-
-
-## TODO
-+ Email client
