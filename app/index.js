@@ -13,11 +13,10 @@ app.use(cors())
 app.post('/v0/telegram', async (request, response) => {
   const { user, message } = request.body
 
-  console.log(user)
-
   const [code, result] = await telegram
     .sendMessage(user, message)
-    .then(() => [200, 'Success'], () => [500, 'Something went wrong'])
+    .then(() => [200, 'Success'])
+    .catch(() => [500, 'Something went wrong'])
 
   response.status(code)
   response.send(result)
