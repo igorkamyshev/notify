@@ -4,10 +4,11 @@ RUN echo -e 'http://dl-cdn.alpinelinux.org/alpine/edge/main\nhttp://dl-cdn.alpin
 RUN apk add --no-cache yarn
 
 WORKDIR /usr/src/app
-COPY package.json ./
-COPY yarn.lock ./
-RUN yarn install --prod
+
+COPY .yarn .yarn
 COPY . .
+
+RUN yarn install --immutable --immutable-cache
 
 EXPOSE 8080
 
