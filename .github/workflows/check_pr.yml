@@ -12,5 +12,4 @@ jobs:
           version: 10.x
       - name: Linting
         run: |
-          yarn install
-          yarn s lint
+          yarn lint:code
