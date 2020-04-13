@@ -1,6 +1,6 @@
 {
   "name": "notify",
-  "script": "index.js",
+  "script": "yarn node index.js",
   "instances": "1",
   "env": {
     "NODE_ENV": "development"
