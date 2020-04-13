@@ -17,7 +17,6 @@
     "node-telegram-bot-api": "^0.40.0"
   },
   "devDependencies": {
-    "@solid-soda/scripts": "^1.20.0",
     "dotenv": "^8.2.0"
   },
   "husky": {
@@ -26,8 +25,5 @@
       "pre-push": "yarn soda lint",
       "commit-msg": "yarn soda commitlint"
     }
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
