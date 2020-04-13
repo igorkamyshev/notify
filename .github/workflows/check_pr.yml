@@ -6,11 +6,10 @@ jobs:
   static_analysis:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@v1
-      with:
-        version: 10.x
-    - name: Linting
-      run: |
-        yarn install
-        yarn s lint
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          version: 10.x
+      - name: Linting
+        run: |
+          yarn lint:code
