@@ -37,8 +37,8 @@ func main() {
 
 	bot.SetWebhook(tgbotapi.NewWebhook(url + postfix + bot.Token))
 
-	helloHandler := func(u tgbotapi.Update) {
-		if u.Message.Text != "/hello" {
+	startHandler := func(u tgbotapi.Update) {
+		if u.Message.Text != "/start" {
 			return
 		}
 
@@ -56,7 +56,7 @@ func main() {
 		updates := bot.ListenForWebhook(postfix + bot.Token)
 
 		for update := range updates {
-			helloHandler(update)
+			startHandler(update)
 		}
 	})()
 
