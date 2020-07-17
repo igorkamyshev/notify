@@ -1,10 +1,2 @@
-.env
-deploy_key.enc
-LICENSE
-logo.png
-README.md
-.prettierignore
-.eslintignore
-.eslintrc
-Dockerfile
-.github
+*
+!notify.go

@@ -1,7 +1,5 @@
 # notify
 
-[![Scripts sets up by @solid-soda/scripts v2.0.0](https://img.shields.io/static/v1?label=@solid-soda/scripts&message=2.0.0&color=75ddf4)](https://github.com/solid-soda/scripts)
-
 Service for sending notifications via public API with ease.
 
 ## Description
