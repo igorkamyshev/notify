@@ -30,7 +30,9 @@ Notify is especialy usefull for static website administrators who want to add a 
 
 Notify is vailable as a [docker container](https://hub.docker.com/r/igorkamyshev/notify/) and can be deployed on your own server.
 
-It exposes port `8080` and accepts `TELEGRAM_KEY` enviroment variable, which is the key for your own Telegram bot.
+It exposes port `8080` and accepts some enviroment variable:
++ `TELEGRAM_KEY` — private token for your own Telegram bot;
++ `PUBLIC_URL` — public address of your site (for telegram web-hook).
 
 ```sh
 docker pull igorkamyshev/notify
